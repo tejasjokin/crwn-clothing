@@ -41,9 +41,9 @@ const Directory = () => {
 	return(
 		<div className="directory-menu">
 			{
-				sections.map(({title, imageUrl, size}, index) => {
+				sections.map(({title, imageUrl, size, linkUrl}, index) => {
 					return(
-						<MenuItem key={index} title={title.toUpperCase()} imageUrl={imageUrl} size={size}/>	
+						<MenuItem key={index} title={title.toUpperCase()} imageUrl={imageUrl} size={size} linkUrl={linkUrl}/>	
 					);
 				})
 			}
