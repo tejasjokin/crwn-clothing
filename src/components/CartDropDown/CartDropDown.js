@@ -13,7 +13,6 @@ import './CartDropDown.scss';
 import {connect} from 'react-redux';
 
 const CartDropDown = ({cartItems, history, dispatch}) => {
-	console.log('hi');
 	return(
 		<div className="cart-dropdown">
 			<div className="cart-items">
