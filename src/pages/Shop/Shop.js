@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+// redux
+import { connect } from 'react-redux';
+
+// reselect
+import {createStructuredSelector} from 'reselect';
+import {selectShopData} from '../../redux/shop/shop.selectors.js';
+
 import CollectionPreview from '../../components/CollectionPreview/CollectionPreview.js';
-import SHOP_DATA from './ShopData.js';
 import './Shop.scss';
 
-const Shop = () => {
-
-  const [collections] = useState(SHOP_DATA);
-
+const Shop = ({collections}) => {
 	return(
     <div>
       {
@@ -20,4 +24,12 @@ const Shop = () => {
 	);
 }
 
-export default Shop;
+const mapStateToProps = createStructuredSelector({
+  collections: selectShopData
+});
+
+const mapDispatchToProps = {
+  
+}
+
+export default connect(mapStateToProps)(Shop);

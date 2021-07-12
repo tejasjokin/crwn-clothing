@@ -1,4 +1,5 @@
-const SHOP_DATA = [
+const initialState = {
+	shopItems: [
    {
     id: 1,
     title: 'Hats',
@@ -245,5 +246,13 @@ const SHOP_DATA = [
     ]
   }
 ]
+}
 
-export default SHOP_DATA;
+const shopReducer = (state = initialState, { type, payload }) => {
+	switch (type) {
+	default:
+		return state
+	}
+}
+
+export default shopReducer;
